@@ -22,14 +22,13 @@ import ssl
 import time
 import sys
 
-from cloudify import dispatch
 import pika
 from pika.exceptions import AMQPConnectionError
 
+from cloudify import dispatch
+
 D_CONN_ATTEMPTS = 12
 D_RETRY_DELAY = 5
-BATCH_SIZE = 100
-MAX_BATCH_DELAY = 5
 BROKER_PORT_SSL = 5671
 BROKER_PORT_NO_SSL = 5672
 
